@@ -1,8 +1,10 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
 var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+app.use(express.static('public'));
 
 app.get('/',function(req,res){
     res.sendfile('./public/form.html');

@@ -1,0 +1,43 @@
+.sidetable{
+    border:1px solid gray;
+}
+
+.formtag{width:350px; height:50px;
+}
+#addTable{
+    width:500px;
+}
+
+.deletebutton{
+    width:auto;
+    height:44px;
+}
+
+.submit {
+    position:static;
+    bottom:0;
+    width:70px;
+    height:40px;
+
+    background-color: powderblue;
+
+    border: none;
+
+    color:#fff;
+
+    padding: 15px 0;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: block;
+
+    font-size: 15px;
+
+    margin: 4px;
+
+    cursor: pointer;
+    border-radius:10px;
+
+}

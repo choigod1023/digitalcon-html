@@ -2,6 +2,7 @@
 
 <head>
     <title>설문지 제작</title>
+    <link rel="stylesheet" href="./form.css">
     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
     <script language="javascript">
         var oTbl;
@@ -13,8 +14,8 @@
             var oCell = oRow.insertCell();
 
             //삽입될 Form Tag
-            var frmTag = "<input type=text name=addText[] style=width:350px; height:20px;> ";
-            frmTag += "<input type=button value='삭제' onClick='removeRow()' style='cursor:hand'>";
+            var frmTag = "<input type=text class = \"formtag\" name=addText[] style=\"margin-top:50px;margin-left: 74px;\">";
+            frmTag += "<input type=button class = \"deletebutton\" value='삭제' onClick='removeRow()' style='cursor:hand'>";
             oCell.innerHTML = frmTag;
         }
         //Row 삭제
@@ -39,41 +40,55 @@
 </head>
 
 <body>
-    <form action="/" name="form" method="post" >
-        <table width="400" align="center" border="0" cellspacing="0" cellpadding="0">
+    <h1 align="center">설문지 생성</h1>
+    <form action="/" name="form" method="post">
+        <table class="sidetable" width="400" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
-                <td colspan="2" align="left" bgcolor="#FFFFFF">
+                <td colspan="2" align="center" bgcolor="#FFFFFF">
                     <table width="100%" border="0" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td colspan="5" bgcolor="#FFFFFF" height="25" align="left"><input name="addButton" type="button"
-                                    style="cursor:hand" onClick="insRow()" value="추가">
-                                <font color="#FF0000">*</font>추가버튼을 클릭해 보세요.
+                            <td colspan="5" bgcolor="#FFFFFF" height="25" align="center">
+                                <input name="addButton" type="button" style="cursor:hand" onClick="insRow()" value="추가">
+                                <font color="#FF0000">*</font>추가버튼을 누르면 질문이 추가됩니다
                             </td>
                         </tr>
                         <tr>
                             <td height="25">
-                                <table id="addTable" width="400" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" border="0">
+                                <table id="addTable" width="400" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" border="0" align="center">
+                                    <tr align="center">
+                                        <td align="center" style="padding-top:50px;">
+                                            <input type="text" class="formtag" name="addText[]" value="이름없는 설문지">
+                                        </td>
+                                        <td align="center"></td>
+                                    </tr>
                                     <tr>
-                                            <td><input type="text" name="addText[]" value = "이름없는 설문지" style="width:350px; height:20px;"></td>
-                                            <td align="left"></td>
-                                        <td><input type="text" name="addText[]" value = "설문지 설명" style="width:350px; height:20px;"></td>
-                                        <td align="left"></td>
+                                        <td align="center" style="padding-top:50px;">
+                                            <input type="text" class="formtag" name="addText[]" value="설문지 설명">
+                                        </td>
+                                        <td align="center">
+                                        </td>
                                     </tr>
                                 </table>
-                            </td>
+                            </td><div><input type="submit" name="button" value="확인" onClick="frmCheck();" class="submit"></div><br>
+                                        
                         </tr>
                     </table>
                 </td>
             </tr>
         </table>
-        <table width="400" border="0" cellspacing="0" cellpadding="0">
+        </td>
+        </tr>
+        </table>
+        <table>
             <tr>
-                <td height="10">
                 </td>
             </tr>
             <tr>
                 <td align="center">
-                    <input type="submit" name="button" value="확인" onClick="frmCheck();">
+
+                    <div>
+
+                    </div>
                 </td>
             </tr>
         </table>
